@@ -47,7 +47,7 @@ tape.test('secure schema by default', function (t) {
 
 tape.test('invalid schema', function (t) {
   bundle('invalid.schema', function (err, src) {
-    t.ok(err, 'does not compile insecure schema')
+    t.ok(err, 'does not compile invalid schema')
     t.match(err.message, /Unexpected token/, 'has correct error message')
     t.end()
   })

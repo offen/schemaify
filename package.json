@@ -1,0 +1,47 @@
+{
+  "name": "@offen/schemaify",
+  "version": "0.0.0",
+  "description": "Browserify transform for compiling JSON schemas at build time using AJV",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "standard",
+    "test": "tape test/test.js",
+    "preversion": "npm test",
+    "version": "changes --commits",
+    "postversion": "git push --follow-tags && npm publish --access public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/offen/schemaify.git"
+  },
+  "keywords": [
+    "json",
+    "schema",
+    "ajv",
+    "browserify",
+    "transform"
+  ],
+  "author": "Frederik Ring <frederik.ring@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/offen/schemaify/issues"
+  },
+  "homepage": "https://github.com/offen/schemaify#readme",
+  "dependencies": {
+    "ajv": "^6.12.3",
+    "ajv-pack": "^0.3.1",
+    "through2": "^4.0.2"
+  },
+  "devDependencies": {
+    "@studio/changes": "^2.0.1",
+    "browserify": "^16.5.1",
+    "standard": "^14.3.4",
+    "tape": "^5.0.1",
+    "vm": "^0.1.0"
+  },
+  "standard": {
+    "env": [
+      "node"
+    ]
+  }
+}
